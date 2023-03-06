@@ -8,9 +8,9 @@
 
 # 定义
 
-- [从0到1](basic/README.md)
-  - [英雄](basic/hero.md)
-  - [非英雄](basic/not_hero.md)
-  - [装备](basic/item.md)
-  - [商店](basic/store.md)
-  - [游戏机制](basic/mechanism.md)
+- [从0到1](src/basic/README.md)
+  - [英雄](src/basic/hero.md)
+  - [非英雄](src/basic/not_hero.md)
+  - [装备](src/basic/item.md)
+  - [商店](src/basic/store.md)
+  - [游戏机制](src/basic/mechanism.md)
