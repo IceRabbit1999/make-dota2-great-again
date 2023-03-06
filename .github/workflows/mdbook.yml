@@ -15,8 +15,10 @@ jobs:
 
       - name: Build
         run: |
-          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.18/mdbook-v0.4.18-x86_64-unknown-linux-gnu.tar.gz | tar -xz
-          ./mdbook build
+          mkdir bin
+          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.28/mdbook-v0.4.28-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
+          bin/mdbook build
+          
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
