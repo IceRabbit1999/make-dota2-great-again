@@ -6,8 +6,9 @@ src = "src"
 title = "Make Dota2 Great Again"
 
 [output.html]
-git-repository-url = "https://github.com/rust-lang/mdBook"
+git-repository-url = "https://github.com/IceRabbit1999/make-dota2-great-again"
 default-theme = "rust"
+
 [output.html.fold]
 enable = true
 level = 0
