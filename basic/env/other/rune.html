@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>环境 - Make Dota2 Great Again</title>
+        <title>神符 - Make Dota2 Great Again</title>
 
 
         <!-- Custom HTML head -->
@@ -12,20 +12,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="../favicon.svg">
-        <link rel="shortcut icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="icon" href="../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../highlight.css">
-        <link rel="stylesheet" href="../tomorrow-night.css">
-        <link rel="stylesheet" href="../ayu-highlight.css">
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
@@ -34,7 +34,7 @@
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "../";
+            var path_to_root = "../../../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
         </script>
 
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><li class="part-title">开始之前</li><li class="chapter-item "><a href="../../index.html"><strong aria-hidden="true">1.</strong> 你准备好了吗</a></li><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">Component</li><li class="chapter-item "><a href="../basic/base.html"><strong aria-hidden="true">2.</strong> 基础组件</a></li><li class="chapter-item expanded "><a href="../basic/env.html" class="active"><strong aria-hidden="true">3.</strong> 环境</a></li><li class="chapter-item affix "><li class="part-title">Entity</li><li class="chapter-item affix "><li class="part-title">System</li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><li class="part-title">开始之前</li><li class="chapter-item "><a href="../../../../index.html"><strong aria-hidden="true">1.</strong> 你准备好了吗</a></li><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">从0到1</li><li class="chapter-item "><a href="../../../basic/base.html"><strong aria-hidden="true">2.</strong> 基础组件</a></li><li class="chapter-item expanded "><a href="../../../basic/env/env_readme.html"><strong aria-hidden="true">3.</strong> 环境</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../basic/env/map.html"><strong aria-hidden="true">3.1.</strong> 地图</a></li><li class="chapter-item "><a href="../../../basic/env/building/building_readme.html"><strong aria-hidden="true">3.2.</strong> 建筑</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../basic/env/building/barracks.html"><strong aria-hidden="true">3.2.1.</strong> 兵营</a></li><li class="chapter-item "><a href="../../../basic/env/building/tower.html"><strong aria-hidden="true">3.2.2.</strong> 防御塔</a></li></ol></li><li class="chapter-item "><a href="../../../basic/env/entity/entity_readme.html"><strong aria-hidden="true">3.3.</strong> 单位</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../basic/env/entity/creep.html"><strong aria-hidden="true">3.3.1.</strong> 小兵</a></li><li class="chapter-item "><a href="../../../basic/env/entity/neutral_creep.html"><strong aria-hidden="true">3.3.2.</strong> 中立野怪</a></li><li class="chapter-item "><a href="../../../basic/env/entity/roshan.html"><strong aria-hidden="true">3.3.3.</strong> 肉山</a></li><li class="chapter-item "><a href="../../../basic/env/entity/courier.html"><strong aria-hidden="true">3.3.4.</strong> 信使</a></li></ol></li><li class="chapter-item expanded "><a href="../../../basic/env/other/other_readme.html"><strong aria-hidden="true">3.4.</strong> 其他</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../basic/env/other/rune.html" class="active"><strong aria-hidden="true">3.4.1.</strong> 神符</a></li><li class="chapter-item "><a href="../../../basic/env/other/outpost.html"><strong aria-hidden="true">3.4.2.</strong> 圣坛</a></li><li class="chapter-item "><a href="../../../basic/env/other/shop.html"><strong aria-hidden="true">3.4.3.</strong> 商店</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -143,56 +143,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>在整张地图上除了英雄以外，还有什么东西？</p>
-<h1 id="地图"><a class="header" href="#地图">地图</a></h1>
-<ol>
-<li>Dota2的地图并不是完全的中心对称，地图的左下是天辉，右上是夜魇，从左上到右下分别是三条兵线，统称为上路、中路、下路。以天辉为例，在左下有一块地区的地势更高，称为高地，高地上有非常多的建筑。</li>
-<li>天辉和夜魇由一条从左上到右下的河道分隔开来</li>
-</ol>
-<h1 id="建筑"><a class="header" href="#建筑">建筑</a></h1>
-<p>建筑普遍拥有血量、防御力等基础组件</p>
-<h2 id="兵营"><a class="header" href="#兵营">兵营</a></h2>
-<p>在地图上，两方的高地各有3组近战兵营和远程兵营，分别对应三条路，远程兵营产生远程小兵，近战兵营产生近战小兵</p>
-<h2 id="防御塔"><a class="header" href="#防御塔">防御塔</a></h2>
-<p>防御塔拥有上一章中提到的基础组件中的大多数属性，分别是：血量、防御力、攻击力、弹道速度、攻击范围、攻击间隔、攻击前摇和后摇，除此之外，防御塔还有一些的独特之处：</p>
-<ol>
-<li>防御塔没有移速，也就是说其不能移动，是固定在地图的特殊位置</li>
-<li>每条兵线上有三座防御塔，以中路为例，离己方高地最远的防御塔称为一塔，第二远的称之为二塔，在高地上的称之为三塔</li>
-<li>在基地面前有额外两座防御塔，称之为四塔/双子塔/门牙，这几种叫法都可以，看个人喜好</li>
-</ol>
-<h1 id="单位"><a class="header" href="#单位">单位</a></h1>
-<h2 id="小兵"><a class="header" href="#小兵">小兵</a></h2>
-<p>小兵拥有血量、防御力、攻击力、弹道速度（远程小兵）、攻击范围、攻击间隔、攻击前摇和后摇、移速，与我们的基础组件组合在一起构成一个英雄类似，小兵由上述组件构成，除此之外：</p>
-<ol>
-<li>小兵虽然没有等级，但其血量、攻击力、防御力会随着时间而提升</li>
-<li>小兵从第0秒开始，每30s会从己方高地刷新出来，每波小兵的配置为3个近战和一个远程，每10波会额外产生一个攻城单位：炮车，每波的数量也会随时间增加</li>
-<li>当己方的兵营被摧毁时，在对应的兵线上对方的兵营就会刷出比普通小兵更加厉害的小兵，此处称之为大兵（远程兵营被摧毁会产生更强大的远程兵，近战兵营同理），对方的兵营被摧毁时同理；如果己方三条兵线的所有兵营都被摧毁，那么敌方的每一条兵线上都会产生比大兵更加强壮的小兵，称之为<strong>超级兵</strong></li>
-</ol>
-<h2 id="中立野怪"><a class="header" href="#中立野怪">中立野怪</a></h2>
-<p>顾名思义，中立野怪独立与天辉和夜魇两方阵营，可以被任意两方攻击，反之亦然</p>
-<ol>
-<li>野怪按大类可以分为远古野怪和普通野怪，普通野怪又可以细分为大野、中野、小野，每种野怪都有几种不同的派生，拥有不同的攻击方式、攻击力、血量、技能等等，此处不详细介绍</li>
-<li>野怪在第1分钟的时候刷新，此后每到整数时间点都会刷新</li>
-<li>以天辉为例，在上路与中路之间和中路与下路之间分别有两片野区，上路与中路之间的野区可以称为副业区，其中有一组远古野怪和一组大野怪；中路与下路之间的野区可以称之为主野区，其中共有3组大野怪，2组中野怪、1组小野怪</li>
-</ol>
-<h2 id="肉山"><a class="header" href="#肉山">肉山</a></h2>
-<p>肉山拥有血量、攻击力、防御力、移速、攻击间隔、攻击范围、技能、攻击前摇和后摇，与野怪一样是独立的阵营，这里把他单独列为一个单位是因为其拥有一些更加独特的额外属性</p>
-<ol>
-<li>肉山位于地图的河道，偏左上方，其所在位置也叫做肉山坑</li>
-<li>肉山和小兵一样也会随着时间的增加变得逐渐强壮</li>
-<li>肉山随英雄一起出生，可以被杀死，会在特定时间后复活</li>
-</ol>
-<h2 id="信使"><a class="header" href="#信使">信使</a></h2>
-<p>每个英雄拥有一只属于自己的信使，信使拥有移速、血量、技能</p>
-<ol>
-<li>信使主要为英雄运送物品，其移速随英雄等级增长</li>
-<li>当英雄等级达到4级时，信使会升级为飞行单位，不再受地形阻碍，可以直线飞行</li>
-<li>信使可以被杀死，复活时间随英雄等级增长</li>
-<li>英雄到达特定等级时信使会解锁特殊技能</li>
-</ol>
-<p>信使是你最忠诚的伙伴！</p>
-<h1 id="其他"><a class="header" href="#其他">其他</a></h1>
-<h2 id="神符"><a class="header" href="#神符">神符</a></h2>
+                        <h1 id="神符"><a class="header" href="#神符">神符</a></h1>
 <p>神符是一种特殊的实体，一共有8种神符：</p>
 <ol>
 <li>金色的赏金神符：拾取后每个友方英雄会获得一定数量的金币，金币数量随时间而增加
@@ -229,7 +180,7 @@
 <li>绿色的恢复神符：拾取后会逐渐恢复拾取者的生命与魔法至最大值
 <ul>
 <li>只对拾取者有效，受到来自敌方英雄和肉山的攻击时会被打断恢复效果</li>
-<li>有一定时间限制 </li>
+<li>有一定时间限制</li>
 </ul>
 </li>
 <li>紫色的奥术神符：拾取后减少拾取者释放技能所需的魔法值和技能的冷却时间
@@ -245,28 +196,18 @@
 </li>
 </ol>
 <p>神符可以被攻击，被攻击后会直接消失</p>
-<h2 id="圣坛"><a class="header" href="#圣坛">圣坛</a></h2>
-<p>圣坛是一种特殊的建筑，位于两方的主野区</p>
-<ol>
-<li>圣坛每分钟会为友方所有英雄提供一定量的经验值，初始时两方各自拥有一座圣坛</li>
-<li>当一方的任意一座二塔被摧毁时，其圣坛可以被地方占领，占领后失去经验值提供</li>
-</ol>
-<h2 id="商店"><a class="header" href="#商店">商店</a></h2>
-<p>商店是出售物品的地方</p>
-<ol>
-<li>商店分为两种，一种是位于家里的商店，一种是位于野外的神秘商店，神秘商店会出售一些家里商店没有的装备</li>
-<li>神秘商店有两处，分别位于上路天辉一塔右侧和下路夜魇一塔左侧</li>
-<li>商店没有阵营区分，你可以去任意一个商店购买装备，哪怕是在敌人的家里</li>
-</ol>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../basic/base.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../basic/env/other/other_readme.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
+                            <a rel="next" href="../../../basic/env/other/outpost.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -274,10 +215,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../basic/base.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../basic/env/other/other_readme.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
+                    <a rel="next" href="../../../basic/env/other/outpost.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
@@ -290,13 +234,13 @@
         </script>
 
 
-        <script src="../elasticlunr.min.js"></script>
-        <script src="../mark.min.js"></script>
-        <script src="../searcher.js"></script>
+        <script src="../../../elasticlunr.min.js"></script>
+        <script src="../../../mark.min.js"></script>
+        <script src="../../../searcher.js"></script>
 
-        <script src="../clipboard.min.js"></script>
-        <script src="../highlight.js"></script>
-        <script src="../book.js"></script>
+        <script src="../../../clipboard.min.js"></script>
+        <script src="../../../highlight.js"></script>
+        <script src="../../../book.js"></script>
 
         <!-- Custom JS scripts -->
 
