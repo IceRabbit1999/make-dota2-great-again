@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>从0到1 - Make Dota2 Great Again</title>
+        <title>基础组件 - Make Dota2 Great Again</title>
 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><li class="part-title">开始之前</li><li class="chapter-item "><a href="../../index.html"><strong aria-hidden="true">1.</strong> 你准备好了吗</a></li><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">定义</li><li class="chapter-item expanded "><a href="../basic/index.html" class="active"><strong aria-hidden="true">2.</strong> 从0到1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../basic/hero.html"><strong aria-hidden="true">2.1.</strong> 英雄</a></li><li class="chapter-item "><a href="../basic/not_hero.html"><strong aria-hidden="true">2.2.</strong> 非英雄</a></li><li class="chapter-item "><a href="../basic/item.html"><strong aria-hidden="true">2.3.</strong> 装备</a></li><li class="chapter-item "><a href="../basic/store.html"><strong aria-hidden="true">2.4.</strong> 商店</a></li><li class="chapter-item "><a href="../basic/mechanism.html"><strong aria-hidden="true">2.5.</strong> 游戏机制</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><li class="part-title">开始之前</li><li class="chapter-item "><a href="../../index.html"><strong aria-hidden="true">1.</strong> 你准备好了吗</a></li><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">Component</li><li class="chapter-item expanded "><a href="../basic/base.html" class="active"><strong aria-hidden="true">2.</strong> 基础组件</a></li><li class="chapter-item "><a href="../basic/env.html"><strong aria-hidden="true">3.</strong> 环境</a></li><li class="chapter-item affix "><li class="part-title">Entity</li><li class="chapter-item affix "><li class="part-title">System</li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -143,7 +143,24 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="从0到1"><a class="header" href="#从0到1">从0到1</a></h1>
+                        <p>本节将以英雄为例，引出游戏的基本组成组件，这些组件每一样基本上一两句话就可以解释清楚，足够简单，也是很多游戏共通的部分，其中比较特殊的地方都由粗体标出</p>
+<h1 id="怎样组成一个英雄"><a class="header" href="#怎样组成一个英雄">怎样组成一个英雄</a></h1>
+<ol>
+<li>血量： 与很多游戏一样，英雄拥有自己的血量上限与恢复速率，血量为0,英雄死亡</li>
+<li>魔法值：英雄释放技能所需的条件，大部分技能都需要魔法值来释放，同样拥有上限与恢复速率</li>
+<li>攻击力：英雄的攻击力是一个浮动的范围，每次攻击造成的伤害将在这个范围内随机，<strong>英雄的攻击力与其主属性成正相关</strong></li>
+<li>防御力：英雄的防御力分为物理防御与魔法防御，物理防御体现为护甲，魔法防御也叫做魔法抗性，简称为魔抗，可以简单理解为护甲主要针对攻击力，魔抗主要针对技能</li>
+<li>技能：大多数英雄拥有3个小技能和一个大招，小技能最高等级为4级，最低能在英雄7级时学满（3级最高技能等级为2,5级为3,7级为4），大招最高等级为3级，分别在英雄6级，12级，18级时可以学习；技能分为主动和被动，被动技能无需释放</li>
+<li>属性：每个英雄个拥有三种属性，分别为<strong>力量、敏捷、智力</strong>，其中一种会是英雄的<strong>主属性</strong>，通常由此称呼英雄的大类，比如力量英雄、敏捷英雄，每个英雄对于每种属性有独特的<strong>成长</strong>：英雄在每次升级时每种属性会增加对应的成长值</li>
+<li>移动速度：简称移速，顾名思义是指英雄的移动速度</li>
+<li><strong>转身速率</strong>：简单理解为英雄的朝向改变时所需要的时间</li>
+<li><strong>弹道速度</strong>：远程英雄专有，指英雄的攻击从出手到落到敌人身上的速度</li>
+<li>攻击范围：英雄最远能从哪里开始攻击</li>
+<li>攻击间隔：决定了英雄的攻速上限，攻击间隔越小，攻速上限越高</li>
+<li><strong>攻击前摇和后摇</strong>：英雄在做出攻击动作时的准备时间和结束时间</li>
+<li>等级：英雄的最高等级为30级，每次升级所需要的经验值随等级提升而变多</li>
+<li>装备与物品栏：英雄拥有6个装备栏、3个背包栏、1个中立装备栏、1个tp栏，(这里暂时不用管是什么意思，了解英雄有用装备栏，可以装备物品就可以了)</li>
+</ol>
 
                     </main>
 
@@ -153,7 +170,7 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../basic/hero.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../basic/env.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -167,7 +184,7 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../basic/hero.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../basic/env.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
